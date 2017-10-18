@@ -36,7 +36,7 @@
   
     <ul class="right hide-on-med-and-down">
       <li><a href="/">Home</a></li>
-    {{#if ensureLoggedIn }}
+    {{#if loggedIn }}
     <li><a href="/logout">Log Out</a></li>
     {{else}}
     <li><a href="/login">Log In</a></li>
@@ -46,7 +46,7 @@
     
     <ul class="side-nav" id="mobile-demo">
       <li><a href="/">Home</a></li>
-    {{#if ensureLoggedIn }}
+    {{#if loggedIn }}
      <li><a href="/logout">Login Out</a></li>
     {{else}}
      <li><a href="/login">Log In</a></li>
