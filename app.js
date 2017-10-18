@@ -10,6 +10,7 @@ const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
 const flash = require('connect-flash');
 var exphbs = require('express-handlebars');
+var bracket = require("./models/brackets.js");
 
 dotenv.load();
 
