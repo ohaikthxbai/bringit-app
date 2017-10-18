@@ -7,7 +7,7 @@ var orm = {
 selectAll: function(table, vals, cb) {
     var val = vals[0];
 
-    queryString = "SELECT * FROM "+table+" WHERE USER_ID = "+val+";"
+    queryString = "SELECT * FROM "+table+" WHERE USER_ID = '"+val+"';"
 
     connection.query(queryString, vals, function(err, result) {
         if (err) {
