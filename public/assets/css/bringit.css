@@ -1,24 +1,86 @@
-body {
-    background: url(/assets/images/soccer-field.JPG) no-repeat center center fixed;     
-}
-
-.translucent {
-    color:black;
-    opacity: .8;
-}
-
-
-.bg-color {
+::-webkit-scrollbar {
+    display: none;
+ }
+ 
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #13241B;
+ }
+ 
+ .bg-color {
     background-color: #9CA491;
-}
-
-.brand-logo {
+ }
+ 
+ img.brand-logo {
     padding-left: 5px;
     height: 60px;
-}
-
-@media (max-width: 600px) {
-.brand-logo img {
-      height: 50px;
+ }
+ 
+ 
+ #banner-sec {
+    text-align: center;
+    color: #F1f1f1;
+ }
+ 
+ main {
+    flex: 1 0 auto;
+    color: black;
+ }
+ 
+ #main-sec {
+    border-radius: 3px;
+    height: 1000px;
+    background-color: #F1F1F1;
+    margin: 40px;
+    padding: 50px;
+    border: solid 10px #9CA491;
+ }
+ 
+ #main-list li {
+    padding: 15px 0px;
+ }
+ 
+ input:not([type]),
+ input[type=text]:not(.browser-default),
+ input[type=password]:not(.browser-default),
+ input[type=email]:not(.browser-default),
+ input[type=url]:not(.browser-default),
+ input[type=time]:not(.browser-default),
+ input[type=date]:not(.browser-default),
+ input[type=datetime]:not(.browser-default),
+ input[type=datetime-local]:not(.browser-default),
+ input[type=tel]:not(.browser-default),
+ input[type=number]:not(.browser-default),
+ input[type=search]:not(.browser-default),
+ textarea.materialize-textarea {
+    border-bottom: 1px solid #29101f;
+ }
+ 
+ input:not([type]):focus:not([readonly]),
+ input[type=text]:not(.browser-default):focus:not([readonly]),
+ input[type=password]:not(.browser-default):focus:not([readonly]),
+ input[type=email]:not(.browser-default):focus:not([readonly]),
+ input[type=url]:not(.browser-default):focus:not([readonly]),
+ input[type=time]:not(.browser-default):focus:not([readonly]),
+ input[type=date]:not(.browser-default):focus:not([readonly]),
+ input[type=datetime]:not(.browser-default):focus:not([readonly]),
+ input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+ input[type=tel]:not(.browser-default):focus:not([readonly]),
+ input[type=number]:not(.browser-default):focus:not([readonly]),
+ input[type=search]:not(.browser-default):focus:not([readonly]),
+ textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #590424;
+ }
+ 
+ footer.page-footer {
+    background-color: #9CA491;
+ }
+ 
+ 
+ @media (max-width: 600px) {
+    .brand-logo img {
+        height: 50px;
     }
-  }
+ }
