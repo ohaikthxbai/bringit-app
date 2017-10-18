@@ -33,6 +33,7 @@ const strategy = new Auth0Strategy(
   }
 );
 
+// passport
 passport.use(strategy);
 
 // you can use this section to keep a smaller payload
