@@ -4,9 +4,12 @@ var connection = require("./connection.js");
 //Set the ORMs
 var orm = {
 //Query to select all elements
-  selectAll: function(tableInput, cb) {
-    var queryString = "SELECT * FROM "+tableInput+ ";";
-    connection.query(queryString, function(err, result) {
+selectAll: function(table, vals, cb) {
+    var val = vals[0];
+
+    queryString = "SELECT * FROM "+table+" WHERE USER_ID = "+val+";"
+
+    connection.query(queryString, vals, function(err, result) {
         if (err) {
             throw err;
           }

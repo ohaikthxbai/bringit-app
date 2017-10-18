@@ -1,6 +1,7 @@
 const express = require('express');
 const passport = require('passport');
 const router = express.Router();
+var bracket = require("../models/brackets.js");
 
 
 const env = {

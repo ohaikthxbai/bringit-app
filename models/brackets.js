@@ -2,12 +2,12 @@
 var orm = require("../config/orm.js");
 
 //Call ORMs
-var restaurant = {
-  selectAll: function(cols, vals, cb) {
-    orm.selectAll("RESTAURANT", cols, vals, function(res) {
-      cb(res);
-    });
-  }
+var brackets = {
+    selectAll: function(colVals, condition, cb) {
+        orm.selectAll(colVals, condition, function(res) {
+          cb(res);
+        });
+      }
   //,
 //   numberRestaurant: function(colVals, condition, cb) {
 //     orm.numberRestaurant(colVals, condition, function(res) {
@@ -41,4 +41,4 @@ var restaurant = {
 //   }
 };
 
-module.exports = restaurant;
+module.exports = brackets;
