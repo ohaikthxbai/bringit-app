@@ -14,6 +14,7 @@ connection = mysql.createConnection({
     // password: 'root',
     // port: 8889,
     // database: 'bringit'
+    //
   });
 
 //Connect to the database
