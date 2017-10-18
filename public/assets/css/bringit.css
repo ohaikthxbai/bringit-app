@@ -1,3 +1,13 @@
+body {
+    background: url(/assets/images/soccer-field.JPG) no-repeat center center fixed;     
+}
+
+.translucent {
+    color:black;
+    opacity: .8;
+}
+
+
 .bg-color {
     background-color: #9CA491;
 }
