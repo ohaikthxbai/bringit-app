@@ -26,10 +26,13 @@
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
         <ul class="right hide-on-med-and-down">
-          <li><a class="modal-trigger" href="/">Home</a></li>
+          {{!-- <li><a class="modal-trigger" href="/">Home</a></li> --}}
           {{#if loggedIn }}
-          <li><a class="modal-trigger btn pink darken-4 pulse modal-trigger" href="/logout">Log Out</a></li>
+          <li><a class="modal-trigger" href="/user">Dashboard</a></li>
+          <li><a class="modal-trigger" href="/create">New Bracket</a></li>
+          <li><a class="modal-trigger btn pink darken-4 modal-trigger" href="/logout">Log Out</a></li>
           {{else}}
+          <li><a class="modal-trigger" href="/">Home</a></li> 
           <li><a class="btn pink darken-4 pulse modal-trigger" href="/login">Sign up / Log In</a></li>
           {{/if}} {{!--
           <li><a href="/login">Login</a></li> --}}
@@ -39,10 +42,13 @@
   </div>
 
   <ul class="side-nav" id="mobile-demo">
-    <li><a class="modal-trigger" href="/">Home</a></li>
+    {{!-- <li><a class="modal-trigger" href="/">Home</a></li> --}}
     {{#if loggedIn }}
-    <li><a class="modal-trigger btn pink darken-4 pulse modal-trigger" href="/logout">Log Out</a></li>
+    <li><a class="modal-trigger" href="/user">Dashboard</a></li>
+    <li><a class="modal-trigger" href="/create">New Bracket</a></li>
+    <li><a class="modal-trigger btn pink darken-4 modal-trigger" href="/logout">Log Out</a></li>
     {{else}}
+    <li><a class="modal-trigger" href="/">Home</a></li> 
     <li><a class="btn pink darken-4 pulse modal-trigger" href="/login">Sign up / Log In</a></li>
     {{/if}} {{!--
     <li><a href="/login">Login</a></li> --}}

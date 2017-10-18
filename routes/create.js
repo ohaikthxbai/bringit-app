@@ -14,30 +14,13 @@ router.get('/', ensureLoggedIn, function(req, res, next) {
       123
     ], function (data) {
 
-      res.render('user', {
+      res.render('create', {
         user: USER_CB,
         bracket: data
       });
       console.log(data);
     });
 });
-
-// router.get('/create', ensureLoggedIn, function(req, res, next) {
-//   var USER_CB = req.user
-//   var USER_ID = ""+req.user._json.sub;
-//   brackets.selectAll([
-//     "BRACKET"
-//   ], [
-//       123
-//     ], function (data) {
-
-//       res.render('create', {
-//         user: USER_CB,
-//         bracket: data
-//       });
-//       console.log(data);
-//     });
-// });
 
 
 module.exports = router;

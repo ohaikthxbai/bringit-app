@@ -32,6 +32,11 @@ router.get('/logout', function(req, res) {
   res.redirect('/');
 });
 
+
+// router.get('/create', function(req, res) {
+//   res.render('create');
+// });
+
 router.get('/callback',
   passport.authenticate('auth0', {
     failureRedirect: '/failure'
