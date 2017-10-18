@@ -7,11 +7,11 @@ var brackets = require("../models/brackets.js");
 /* GET user profile. */
 router.get('/', ensureLoggedIn, function(req, res, next) {
   var USER_CB = req.user
-  var USER_ID = ""+req.user._json.sub;
+  var USER_ID = req.user._json.sub
   brackets.selectAll([
     "BRACKET"
   ], [
-      123
+        USER_ID
     ], function (data) {
 
       res.render('create', {

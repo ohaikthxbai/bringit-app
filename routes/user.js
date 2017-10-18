@@ -8,7 +8,6 @@ var brackets = require("../models/brackets.js");
 router.get('/', ensureLoggedIn, function(req, res, next) {
   var USER_CB = req.user
   var USER_ID = req.user._json.sub
-  // USER_ID = USER_ID.replace("auth0|", "");;
   brackets.selectAll([
     "BRACKET"
   ], [
@@ -22,23 +21,5 @@ router.get('/', ensureLoggedIn, function(req, res, next) {
       console.log(data);
     });
 });
-
-// router.get('/create', ensureLoggedIn, function(req, res, next) {
-//   var USER_CB = req.user
-//   var USER_ID = ""+req.user._json.sub;
-//   brackets.selectAll([
-//     "BRACKET"
-//   ], [
-//       123
-//     ], function (data) {
-
-//       res.render('create', {
-//         user: USER_CB,
-//         bracket: data
-//       });
-//       console.log(data);
-//     });
-// });
-
 
 module.exports = router;
