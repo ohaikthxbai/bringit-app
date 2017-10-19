@@ -111,12 +111,12 @@
                             skipConsolationRound: true,
                             save: saveFn,
                             disableToolbar: true,
-                            userData: "mongodb://localhost/bringit-bracket/bracket"
+                            // userData: "mongodb://localhost/bringit-bracket/bracket"
                         });
 
                         /* You can also inquiry the current data */
-                        var data = container.bracket('data')
-                        $('#dataOutput').text(jQuery.toJSON(data))
+                        // var data = container.bracket('data')
+                        // $('#dataOutput').text(jQuery.toJSON(data))
                     });
                 });
             });

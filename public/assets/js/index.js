@@ -1,11 +1,11 @@
 (function ($) {
-    $(function () {
-        // mobile responsive side nav
-        $(".button-collapse").sideNav();
-        // activate modal popups
-        $('.modal').modal();
-        //$('.modal-trigger').leanModal();
-    });
+    // $(function () {
+    //     // mobile responsive side nav
+    //     // $(".button-collapse").sideNav();
+    //     // activate modal popups
+    //     // $('.modal').modal();
+    //     //$('.modal-trigger').leanModal();
+    // });
 
 
     $(window).scroll(function() {

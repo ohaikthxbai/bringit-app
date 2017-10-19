@@ -6,7 +6,7 @@ var brackets = require("../models/brackets.js");
 
 /* GET user profile. */
 router.post('/', ensureLoggedIn, function(req, res, next) {
-    console.log(req.body.DBA_NAME);
+    console.log(req.body);
   var USER_CB = req.user
   var USER_ID = req.user._json.sub
   brackets.selectAll([
