@@ -7,8 +7,12 @@ var brackets = {
         orm.selectAll(colVals, condition, function(res) {
           cb(res);
         });
+      },
+      insertBracket: function(colVals, condition, cb) {
+        orm.insertBracket(colVals, condition, function(res) {
+          cb(res);
+        });
       }
-  //,
 //   numberRestaurant: function(colVals, condition, cb) {
 //     orm.numberRestaurant(colVals, condition, function(res) {
 //       cb(res);

@@ -6,7 +6,7 @@ var orm = {
 //Query to select all elements
 selectAll: function(table, vals, cb) {
     var val = vals[0];
-
+    
     queryString = "SELECT * FROM "+table+" WHERE USER_ID = '"+val+"';"
 
     connection.query(queryString, vals, function(err, result) {
@@ -15,9 +15,20 @@ selectAll: function(table, vals, cb) {
           }
           cb(result);
     });
-  }
- // ,
+  } ,
+  insertBracket: function(table, vals, cb) {
+    var val = vals[0];
+    var valString = vals[1];
 
+    queryString = "UPDATE "+table+" SET FULL_BRACKET = '"+valString+"' WHERE USER_ID = '"+val+"';"
+
+    connection.query(queryString, vals, function(err, result) {
+        if (err) {
+            throw err;
+          }
+          cb(result);
+    });
+  } 
 //Determine the number of records/restaurants
 // numberRestaurant: function(table, vals, cb) {
 //    var queryString = "SELECT COUNT(*) AS DATA_LEN, LICENSE_NO FROM (SELECT LICENSE_NO, DBA_NAME, RISK, ADDRESS, CITY, STATE, ZIP, MAX(INSPECTION_DATE) AS INSPECTION_DATE FROM "+table+" WHERE DBA_NAME LIKE '%"+vals+"%' GROUP BY DBA_NAME, RISK, ADDRESS) b;"
