@@ -12,11 +12,14 @@ const flash = require('connect-flash');
 var exphbs = require('express-handlebars');
 var bracket = require("./models/brackets.js");
 
+
+
 dotenv.load();
 
 const routes = require('./routes/index');
 const user = require('./routes/user');
 const create = require('./routes/create');
+const submit = require("./routes/submit.js");
 
 // This will configure Passport to use Auth0
 const strategy = new Auth0Strategy(
@@ -101,6 +104,7 @@ app.use(function(req, res, next) {
 app.use('/', routes);
 app.use('/user', user);
 app.use('/create', create);
+app.use('/brackets', submit);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
