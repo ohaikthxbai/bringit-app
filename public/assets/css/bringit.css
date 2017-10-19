@@ -20,6 +20,8 @@
  
  
  #banner-sec {
+    font-family: 'Bungee Inline', cursive;
+    letter-spacing: 3px;
     margin-top: -100px;
     background-image: url("../images/bringitbracket.svg");
     background-repeat: no-repeat;
@@ -29,6 +31,7 @@
     text-align: center;
     color: #F1f1f1;
  }
+ 
 
  div.white-text {
      margin-top: 100px;
